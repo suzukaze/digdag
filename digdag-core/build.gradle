@@ -15,4 +15,16 @@ dependencies {
     compile 'org.postgresql:postgresql:9.4.1208'
     compile 'org.yaml:snakeyaml:1.14'
     compile 'com.google.code.findbugs:annotations:3.0.1'
+
+    compile 'org.eclipse.aether:aether-api:1.1.0'
+    compile 'org.eclipse.aether:aether-spi:1.1.0'
+    compile 'org.eclipse.aether:aether-util:1.1.0'
+    compile 'org.eclipse.aether:aether-impl:1.1.0'
+    compile 'org.eclipse.aether:aether-connector-basic:1.1.0'
+    compile 'org.eclipse.aether:aether-transport-file:1.1.0'
+    compile 'org.eclipse.aether:aether-transport-http:1.1.0'
+    compile('org.apache.maven:maven-aether-provider:3.1.0') {
+        // sisu dependency injector is not used
+        exclude group: 'org.eclipse.sisu'
+    }
 }
